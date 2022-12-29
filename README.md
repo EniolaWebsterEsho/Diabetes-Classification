@@ -1,9 +1,9 @@
 # Diabetes-Classification
 
-A.	Title
+A.	Title:
 Pima Indians Diabetes Database. This dataset is from the National Institute of Diabetes and Digestive and Kidney Diseases and released by Johns Hopkins University.
 
-B.	Data description
+B.	Data description:
 There are number of 768 instances and 8 attributes with Class. All the attributes are numeric and the Class is categorical. The attributes are listed below:
 1. Number of times pregnant
    	2. Plasma glucose concentration a 2 hours in an oral glucose tolerance test
@@ -16,15 +16,15 @@ There are number of 768 instances and 8 attributes with Class. All the attribute
  	 9. Class variable (0 or 1)
 Several constraints were placed on the selection of these instances from a larger database.  In particular, all patients here are females at least 21 years old of Pima Indian heritage.
 
-C.	Task
+C.	Task:
 Classify a person tests positive or negative for diabetes based on the 8 attributes.
 
-D.	Data Information
+D.	Data Information:
 The figure below shows the first five information of the diabetes dataset (diabetes.head()).
 
 ![image](https://user-images.githubusercontent.com/91756330/209987525-db573df0-01e9-4421-873b-dc40dbc24fe9.png)
 
-E.	Data Visualization
+E.	Data Visualization:
 The best way to start the analysis is visualizing the dataset. Below is the histogram plot showing the distribution count of each attribute. 
 
 ![image](https://user-images.githubusercontent.com/91756330/209987570-9a875b3a-6a90-48b3-aac6-7bcceb8a066b.png)
@@ -33,7 +33,7 @@ The best way to start the analysis is visualizing the dataset. Below is the hist
  
 ![image](https://user-images.githubusercontent.com/91756330/209987656-249bf3ea-b4fd-49bc-86cd-f3dad3d822bf.png)
 
-F.	Data Cleaning
+F.	Data Cleaning:
 First, I checked for missing values using the isnull().sum() function.
  
 ![image](https://user-images.githubusercontent.com/91756330/209987754-89f00642-4bbf-40f7-9818-6118bae740b5.png)
@@ -50,19 +50,19 @@ For the Class categorical attribute, one hot encoding is used to change the outc
 
 ![image](https://user-images.githubusercontent.com/91756330/209987882-fc56be9a-56b1-46d3-8d60-032351382775.png)
 
-G.	Data Preprocessing
+G.	Data Preprocessing:
 Before implementing classification algorithm, the dataset is scaled using sklearn’s MinMaxScaler() function. This function transform features by scaling each feature to a given range. 
 
 ![image](https://user-images.githubusercontent.com/91756330/209987939-7aa37ae7-0c37-42e0-b2f8-90b92091e3a8.png)
 
-H.	Train Test Split
+H.	Train Test Split:
 Using sklearn’s train_test_split, the feature (X) and target (y) dataframes is split into a training set (80%) and testing set (20%). Training set is used for building classification models and testing set is used for evaluating the performance of the model.
  
 ![image](https://user-images.githubusercontent.com/91756330/209987993-15075a41-7d75-4f82-8481-bd345fbbad49.png)
 
 ![image](https://user-images.githubusercontent.com/91756330/209988034-75581153-07d9-4219-b977-baa21eaae76e.png)
 
-I.	Justification
+I.	Justification:
 
 1.	Decision Tree Classifier
 * It can handle various data type i.e. discrete or continuous values.
@@ -95,7 +95,7 @@ False Negatives (FN [1, 0]): the model incorrect prediction of people that do no
 •	The F1 score is a weighted harmonic mean of precision and recall such that the best score is 1.0 and the worst is 0.0. The model F1 score is 0.84 and 0.65.
 •	Support is the number of actual occurrences of the class in the specified dataset.
 
-K.	Logistic Regression Performance Evaluation and Result
+K.	Logistic Regression Performance Evaluation and Result:
 1.	Accuracy Score
  
 ![image](https://user-images.githubusercontent.com/91756330/209988292-0d953901-a04b-4d7c-ba98-3217788c0cb3.png)
@@ -117,5 +117,5 @@ False Negatives (FN [1, 0]): the model incorrect prediction of people that do no
 •	The F1 score is a weighted harmonic mean of precision and recall such that the best score is 1.0 and the worst is 0.0. The model F1 score is 0.88 and 0.66.
 •	Support is the number of actual occurrences of the class in the specified dataset.
 
-L.	Conclusion
+L.	Conclusion:
 Decision tree classifier and logistic regression models were able to perform well with accuracy of 77.92% and 81.82% respectively. However, the logistic regression performed better than the decision tree and therefore it is a better classification model for this dataset.
